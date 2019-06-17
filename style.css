@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.ttf');
+}
+
+body {
+    padding: 20px;
+    background: #f5f7f8;
+}
+
+
+/* Header --- Nav Menu Bar with Flex */
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 2.3em 0;
+}
+
+.logo {
+    margin-left: 3%;
+}
+
+.logo img {
+    display: block;
+}
+
+nav {
+    margin: 1.5em 0 0 5%;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 1.4em 0 0;
+    font-size: 1.2em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #7D7C7D;
+}
+
+li a:hover {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 600px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .logo {
+        margin-left: 2em;
+    }
+    nav {
+        align-self: center;
+        margin: 0 0.8em 0 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        margin-left: 3%;
+    }
+    .logo img {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+}
+
+
+/* Grid 1 Format */
+
+.grid-1 {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-areas: "head-1 head-1 head-1" "bigpic-1 bigpic-1 bigpic-1" "it1 it2 it3" "footer-1   footer-1   footer-1" "footer-2   footer-2   footer-2" "footer-2   footer-2   footer-2";
+}
+
+.grid-1 div {
+    color: white;
+    font-size: 1.5vw;
+    padding: 20px;
+}
+
+.head-1 {
+    background: #b03532;
+    grid-area: head-1;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.head-1:hover {
+    box-shadow: 5px 5px 8px 0px rgb(79, 83, 90);
+}
+
+.bigpic-1 {
+    grid-area: bigpic-1;
+    display: grid;
+    background: url('images/Reduximage_4.jpg');
+    background-size: cover;
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.bigpic-1:hover {
+    box-shadow: 5px 5px 8px 0px rgb(79, 83, 90);
+}
+
+.item-1 {
+    grid-area: it1;
+    display: grid;
+    background: url('images/DisneyRedux1.jpg');
+    background-size: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    grid-template-areas: "title1 title1" ". ." "comment1 comment1";
+}
+
+.item-1:hover {
+    box-shadow: 5px 5px 8px 0px rgb(79, 83, 90);
+}
+
+.item-2 {
+    grid-area: it2;
+    display: grid;
+    background: url('images/BusinessManBWRedux1.jpg');
+    background-size: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    grid-template-areas: "title1 title1" ". ." "comment1 comment1";
+}
+
+.item-2:hover {
+    box-shadow: 5px 5px 8px 0px rgb(79, 83, 90);
+}
+
+.item-3 {
+    grid-area: it3;
+    display: grid;
+    background: url('images/Reduximage_4.jpg');
+    background-size: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    grid-template-areas: "title1 title1" ". ." "comment1 comment1";
+}
+
+.item-3:hover {
+    box-shadow: 5px 5px 8px 0px rgb(79, 83, 90);
+}
+
+.footer-1 {
+    grid-area: footer-1;
+    display: grid;
+    background: url('images/Reduximage_4.jpg');
+    background-size: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    grid-template-areas: /*prettier-ignore */
+    "title1 title1" ". ." "comment1 comment1";
+}
+
+.footer-1:hover {
+    box-shadow: 5px 5px 8px 0px rgb(79, 83, 90);
+}
+
+.footer-2 {
+    grid-area: footer-2;
+    display: grid;
+    background: url('images/Reduximage_5.jpg');
+    background-size: cover;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    transition: 0.5s;
+    border-radius: 10px;
+    grid-template-areas: "name1 input1 ." "tel1 input2 ." "email1 . .";
+}
+
+.footer-2:hover {
+    box-shadow: 5px 5px 8px 0px rgb(79, 83, 90);
+}
+
+.footer-2 div {
+    color: white;
+    font-size: 1.4vw;
+}
+
+.contact {
+    font-weight: 700;
+    font-size: .9em;
+    font-family: 'Montserrat';
+}
+
+.title1 {
+    background: #da6f2b;
+    grid-area: title1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.comment1 {
+    background: #3d8bb1;
+    grid-area: comment1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.name1 {
+    background: #201c73;
+    grid-area: name1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+input {
+    font-size: .9em;
+    font-family: 'Montserrat';
+    border: none;
+    padding: 0 10px;
+    margin: 0;
+}
+
+input:focus {
+    background: rgba(208, 219, 226, 0.85);
+    border-radius: 5px;
+    outline: none;
+}
+
+.input1 {
+    background: #201c73;
+    grid-area: input1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+}
+
+.tel1 {
+    background: #423e8c;
+    grid-area: tel1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.input2 {
+    background: #423e8c;
+    grid-area: input2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.email1 {
+    background: #6e6ba6;
+    grid-area: email1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.email1 div {
+    font-size: 3 vw;
+}
